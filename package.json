@@ -1,0 +1,8 @@
+{
+  "name": "FluxBot",
+  "version": "1.0.0",
+  "description": "Flux Bot is a simple test by me, just to show im a legend",
+  "main": "bot.js",
+  "author": "FluxR",
+  "dependencies": {}
+}
