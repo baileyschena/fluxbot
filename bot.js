@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const prefix = "!"
+const botsettings = require("./package.json");
+
 
 
 bot.on('ready', () => {
@@ -8,9 +9,15 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  if (msg.content.startsWith(prefix + "ping") {
-    msg.reply('Pong!');
-  }
+  let command = msg.content.split(" ")[0];
+    command = command.slice(botsettings.prefix.length);
+    if (!msg.content.startsWith(botsettings.prefix)) return;
+    if (command === "pingg") {
+      msg.reply("pong");
+    }
+    if (command === "ty") {
+      msg.reply("np");
+    }
 });
 
 
