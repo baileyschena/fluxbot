@@ -21,6 +21,9 @@ bot.on('message', msg => {
     if (command === "pong"){
       msg.reply("ping");
     }
+    if (command === "test") {
+      msg.reply("testpassed");
+    }
 });
 
 
