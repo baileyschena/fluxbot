@@ -10,5 +10,10 @@ bot.on('message', msg => {
     msg.reply('Pong!');
   }
 });
+bot.on('message', msg => {
+  if (msg.content === 'test') {
+    msg.reply('git works idiot');
+  }
+});
 
 bot.login(process.env.BOT_TOKEN);
