@@ -9,18 +9,9 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  if (msg.content === 'ping') {
+  if if (message.content.startsWith(prefix + "ping") {
+    message.reply("Pong!") {
     msg.reply('Pong!');
-  }
-});
-bot.on('message', msg => {
-  if (msg.content === 'test') {
-    msg.reply('git works idiot');
-  }
-});
-bot.on('message', msg => {
-  if (msg.content === 'test2') {
-    msg.reply('git works on chromebook idiot');
   }
 });
 
