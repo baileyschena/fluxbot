@@ -1,5 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const prefix = "!"
+
+if(message.content.indexOf(bot.prefix) !== 0) return;
 
 bot.on('ready', () => {
  console.log(`Logged in as ${bot.user.tag}!`);
