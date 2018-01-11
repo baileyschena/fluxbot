@@ -18,7 +18,7 @@ bot.on('message', msg => {
     if (command === "ty") {
       msg.reply("np");
     }
-    if (command == "pong"){
+    if (command === "pong"){
       msg.reply("ping");
     }
 });
