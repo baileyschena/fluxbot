@@ -4,6 +4,7 @@ const botsettings = require("./package.json");
 
 
 
+
 bot.on('ready', () => {
  console.log(`Logged in as ${bot.user.tag}!`);
 });
@@ -11,7 +12,7 @@ bot.on('ready', () => {
 bot.on('message', msg => {
   let command = msg.content.split(" ")[0];
     command = command.slice(botsettings.prefix.length);
-    let args = message.content.split(" ")[0]
+    let args = msg.content.split(" ")[0]
     if (!msg.content.startsWith(botsettings.prefix)) return;
     if (command === "pingg") {
       msg.reply("pong");
@@ -37,7 +38,14 @@ bot.on('message', msg => {
     if (command === "avatar") {
       if (!args[0]) return;
       if (!msg.mentions.members.first()) return;
-      msg.channel.send(members.mentions.first().user.avatarURL);
+      msg.channel.send(msg.mentions.members.first().user.avatarURL);
+    }
+    if (command === "help"){
+      let embed = new Discord.RichEmbed()
+      .setTitle("FluxBot Command Help")
+      .addField("!avatar", "Shows a mentioned users profile picture", 0)
+      .addField("!epic", "shitpost", 0)
+      msg.channel.send({ embed })
     }
 
 });
