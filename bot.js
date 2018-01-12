@@ -33,6 +33,9 @@ bot.on('message', msg => {
     if (command === "epic") {
       msg.reply("I'm sorry I had to send this to you but now that you have opened it you can't stop reading this. Hi my name is Teresa Fidalgo I died 27 years. If you don't send this to 20 people I will sleep by your side forever. If you don't believe me search me up. Teresa Fidalgo. So send this to 20 people. A girl ignored this and her mom died 20 days later. NO SEND BACKS!!!!! #copied sorry to send this. Btw this is not fake search her up on google : )");
     }
+    if (command === "avatar") {
+      msg.channel.send(msg.author.avatarURL);
+    }
 });
 
 
