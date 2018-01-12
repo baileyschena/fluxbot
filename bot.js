@@ -36,7 +36,7 @@ bot.on('message', msg => {
     }
     if (command === "avatar") {
       if (!args[0]) return;
-      if (!message.mentions.members.first()) return;
+      if (!msg.mentions.members.first()) return;
       msg.channel.send(members.mentions.first().user.avatarURL);
     }
 
