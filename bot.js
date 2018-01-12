@@ -27,6 +27,9 @@ bot.on('message', msg => {
     if (command === "mb") {
       msg.reply("its ok");
     }
+    if (command === "way") {
+      msg.reply("the way to uganda");
+    }
 });
 
 
