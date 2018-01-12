@@ -24,6 +24,9 @@ bot.on('message', msg => {
     if (command === "test") {
       msg.reply("testpassed");
     }
+    if (command === "mb") {
+      msg.reply("its ok");
+    }
 });
 
 
