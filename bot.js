@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const botsettings = require("./package.json");
-
+const key = require("../fluxbotxtra/key.json")
 
 
 
@@ -41,9 +41,6 @@ bot.on('message', msg => {
       if (!msg.mentions.members.first()) return;
       msg.channel.send(msg.mentions.members.first().user.avatarURL);
     }
-
-});
-    }
     if (command === "help"){
       let embed = new Discord.RichEmbed()
       .setTitle("FluxBot Command Help")
@@ -51,8 +48,7 @@ bot.on('message', msg => {
       .addField("!epic", "shitpost", 0)
       msg.channel.send({ embed })
     }
-
 });
 
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(key.key);
