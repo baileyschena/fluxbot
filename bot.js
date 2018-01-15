@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const botsettings = require("./package.json");
-const key = require("../fluxbotxtra/key.json")
+
 
 
 
@@ -51,4 +51,4 @@ bot.on('message', msg => {
 });
 
 
-bot.login(key.key);
+bot.login(process.env.BOT_TOKEN);
