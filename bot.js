@@ -5,6 +5,7 @@ const botsettings = require("./package.json");
 
 
 
+
 bot.on('ready', () => {
  console.log(`Logged in as ${bot.user.tag}!`);
 });
@@ -40,18 +41,7 @@ bot.on('message', msg => {
       if (!msg.mentions.members.first()) return;
       msg.channel.send(msg.mentions.members.first().user.avatarURL);
     }
-    if (command === "prune"){
-      const amount = parseInt(args[0]);
 
-      if (isNaN(amount)) {
-        return message.reply('that isnt a valid number.')
-      }
-      else if (amount < 2) + (amount > 100) {
-        return message.reply("Please choose a number between 2 and 100.")
-      }
-      message.channel.bulkDelete(amount, true).catch(err => {
-        console.error(err);
-        message.channel.send('there was an error trying to prune messages in this channel!');
 });
     }
     if (command === "help"){
